@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { LayoutDashboard, Building2, Map, Target, Sparkles, FileText, MonitorPlay, Mail, Megaphone, Users, Calendar, BarChart3, Settings, ScrollText, UserCircle } from "lucide-react"
+import { LogoutButton } from "./LogoutButton"
 
 const menuItems = [
   { name: "Dashboard", icon: LayoutDashboard, href: "/" },
@@ -48,6 +49,7 @@ export function Sidebar() {
             <span className="font-medium text-sm">{item.name}</span>
           </Link>
         ))}
+        <LogoutButton />
       </div>
     </aside>
   )

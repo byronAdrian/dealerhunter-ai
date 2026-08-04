@@ -10,6 +10,7 @@ export default function PropuestaPage() {
   const router = useRouter()
   const [empresa, setEmpresa] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const [sending, setSending] = useState(false)
 
   useEffect(() => {
     if (!params.id) return
@@ -27,6 +28,38 @@ export default function PropuestaPage() {
 
     fetchEmpresa()
   }, [params.id])
+
+  const handleSendProposal = async () => {
+    if (!empresa?.email) {
+      alert("La empresa no tiene un correo electrónico registrado.")
+      return
+    }
+    
+    setSending(true)
+    try {
+      const res = await fetch('/api/send-proposal', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          companyName: empresa.name, 
+          email: empresa.email, 
+          score: empresa.ai_score_total || 0,
+          companyId: empresa.id 
+        })
+      })
+      const result = await res.json()
+      if (result.success) {
+        alert("¡Propuesta enviada con éxito!")
+      } else {
+        alert("Hubo un error al enviar la propuesta.")
+      }
+    } catch (err) {
+      console.error(err)
+      alert("Error de conexión al enviar el correo.")
+    } finally {
+      setSending(false)
+    }
+  }
 
   if (loading) {
     return <div className="p-6 text-[var(--color-gray-medium)]">Cargando datos de la empresa...</div>
@@ -48,9 +81,13 @@ export default function PropuestaPage() {
             <Download className="w-4 h-4" />
             PDF
           </button>
-          <button className="px-3 py-1.5 bg-[var(--color-gold)] hover:bg-[var(--color-gold-light)] text-[var(--color-graphite)] rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
+          <button 
+            onClick={handleSendProposal}
+            disabled={sending}
+            className="px-3 py-1.5 bg-[var(--color-gold)] hover:bg-[var(--color-gold-light)] text-[var(--color-graphite)] rounded-lg text-sm font-medium transition-colors flex items-center gap-2 disabled:opacity-50"
+          >
             <Send className="w-4 h-4" />
-            Enviar Propuesta
+            {sending ? 'Enviando...' : 'Enviar Propuesta'}
           </button>
         </div>
       </div>
