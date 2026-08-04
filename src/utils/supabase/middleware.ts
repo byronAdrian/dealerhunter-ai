@@ -42,17 +42,10 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url)
   }
 
-  // Si está autenticado y trata de ir a login, redirigir al dashboard (empresas)
+  // Si está autenticado y trata de ir a login, redirigir al dashboard (raíz)
   if (user && isAuthRoute) {
     const url = request.nextUrl.clone()
-    url.pathname = '/empresas'
-    return NextResponse.redirect(url)
-  }
-
-  // Si está en la raíz, redirigir a empresas (dashboard)
-  if (user && request.nextUrl.pathname === '/') {
-    const url = request.nextUrl.clone()
-    url.pathname = '/empresas'
+    url.pathname = '/'
     return NextResponse.redirect(url)
   }
 

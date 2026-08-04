@@ -1,28 +1,49 @@
-import { Map as MapIcon } from "lucide-react"
+import { createClient } from "@/utils/supabase/server"
+import { MapPin } from "lucide-react"
+import MapWrapper from "@/components/MapWrapper"
 
-export default function MapaPage() {
+export const metadata = {
+  title: "Mapa de Leads | DealerHunter"
+}
+
+export default async function MapaPage() {
+  const supabase = await createClient()
+
+  // Obtener datos reales
+  const { data: companies } = await supabase.from("companies").select("*")
+  const allCompanies = companies || []
+
   return (
-    <div className="flex-1 overflow-auto bg-[var(--color-graphite)] p-8">
-      <div className="max-w-6xl mx-auto h-full flex flex-col">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-2xl font-bold text-white mb-2">Mapa de Concesionarios</h1>
-            <p className="text-[var(--color-gray-medium)]">Visualización geográfica de los leads detectados.</p>
-          </div>
+    <div className="space-y-6 relative z-10 max-w-6xl mx-auto">
+      <div className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground font-editorial flex items-center gap-2">
+            <MapPin className="w-8 h-8 text-[var(--color-gold)]" />
+            Mapa de Prospección
+          </h1>
+          <p className="text-muted-foreground mt-1">Ubicación geográfica de los concesionarios y compraventas</p>
         </div>
+      </div>
 
-        <div className="flex-1 bg-[var(--color-graphite-light)] border border-white/10 rounded-xl overflow-hidden min-h-[600px] flex flex-col items-center justify-center text-center relative">
-          <div className="absolute inset-0 opacity-10 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=Spain&zoom=6&size=800x600&maptype=roadmap&style=feature:all|element:labels.text.fill|color:0xffffff&style=feature:all|element:labels.text.stroke|visibility:off&style=feature:water|element:geometry|color:0x1a1a1a&style=feature:landscape|element:geometry|color:0x222222&key=YOUR_API_KEY')] bg-cover bg-center"></div>
-          
-          <div className="relative z-10 p-12 bg-[var(--color-graphite-dark)]/80 backdrop-blur-md border border-white/10 rounded-2xl max-w-md shadow-2xl">
-            <div className="w-16 h-16 bg-[var(--color-gold)]/10 rounded-full flex items-center justify-center mb-4 mx-auto border border-[var(--color-gold)]/20">
-              <MapIcon className="w-8 h-8 text-[var(--color-gold)]" />
-            </div>
-            <h3 className="text-xl font-medium text-white mb-2">Mapa en Desarrollo</h3>
-            <p className="text-[var(--color-gray-medium)]">
-              Próximamente podrás ver un mapa interactivo con la ubicación de todos los concesionarios detectados en tu zona.
-            </p>
-          </div>
+      <div className="glass-panel p-2 rounded-2xl">
+        <MapWrapper companies={allCompanies} />
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div className="glass-panel p-6 rounded-2xl">
+          <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Total Ubicados</h3>
+          <p className="text-3xl font-bold text-foreground font-editorial">{allCompanies.filter(c => c.city).length}</p>
+        </div>
+        <div className="glass-panel p-6 rounded-2xl">
+          <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Sin Ubicación</h3>
+          <p className="text-3xl font-bold text-foreground font-editorial">{allCompanies.filter(c => !c.city).length}</p>
+        </div>
+        <div className="glass-panel p-6 rounded-2xl bg-[var(--color-gold)]/10 border-[var(--color-gold)]/20">
+          <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-2 flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-[var(--color-gold)]" />
+            Estrategia
+          </h3>
+          <p className="text-sm text-muted-foreground">Identifica zonas de alta densidad para planificar visitas comerciales o campañas de mailing locales hiper-segmentadas.</p>
         </div>
       </div>
     </div>

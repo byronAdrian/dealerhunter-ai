@@ -62,22 +62,22 @@ export default function PropuestaPage() {
   }
 
   if (loading) {
-    return <div className="p-6 text-[var(--color-gray-medium)]">Cargando datos de la empresa...</div>
+    return <div className="p-6 text-muted-foreground">Cargando datos de la empresa...</div>
   }
 
   if (!empresa) {
-    return <div className="p-6 text-center text-white">Empresa no encontrada</div>
+    return <div className="p-6 text-center text-foreground">Empresa no encontrada</div>
   }
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between">
-        <Link href={`/empresas/${empresa.id}`} className="flex items-center gap-2 text-sm text-[var(--color-gray-medium)] hover:text-white transition-colors w-fit">
+        <Link href={`/empresas/${empresa.id}`} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors w-fit">
           <ArrowLeft className="w-4 h-4" />
           Volver a {empresa.name}
         </Link>
         <div className="flex gap-2">
-          <button className="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-sm font-medium transition-colors text-white flex items-center gap-2">
+          <button className="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-border/50 rounded-lg text-sm font-medium transition-colors text-foreground flex items-center gap-2">
             <Download className="w-4 h-4" />
             PDF
           </button>
@@ -94,13 +94,13 @@ export default function PropuestaPage() {
 
       <div className="bg-white text-black rounded-xl shadow-xl overflow-hidden print:shadow-none">
         {/* Portada */}
-        <div className="bg-[var(--color-graphite)] text-white p-12 text-center border-b-[8px] border-[var(--color-gold)]">
+        <div className="relative z-10 text-foreground p-12 text-center border-b-[8px] border-[var(--color-gold)]">
           <div className="w-20 h-20 bg-white/10 rounded-2xl mx-auto flex items-center justify-center mb-6">
             <Building2 className="w-10 h-10 text-[var(--color-gold)]" />
           </div>
           <h1 className="text-4xl font-bold mb-4">Auditoría de Presencia Digital</h1>
-          <p className="text-xl text-[var(--color-gray-medium)] mb-8">Preparado para: {empresa.name}</p>
-          <p className="text-sm text-[var(--color-gray-medium)]">DealerHunter AI &copy; 2026</p>
+          <p className="text-xl text-muted-foreground mb-8">Preparado para: {empresa.name}</p>
+          <p className="text-sm text-muted-foreground">DealerHunter AI &copy; 2026</p>
         </div>
 
         {/* Contenido */}
