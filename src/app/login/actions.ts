@@ -15,7 +15,7 @@ export async function login(formData: FormData) {
   })
 
   if (error) {
-    redirect('/login?message=No se pudo iniciar sesión. Verifica tus credenciales.')
+    return { error: 'No se pudo iniciar sesión. Verifica tus credenciales.' }
   }
 
   revalidatePath('/', 'layout')

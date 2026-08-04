@@ -1,16 +1,32 @@
+"use client"
+import { useState } from 'react'
 import { login } from './actions'
+import { Plus, Search, Building2, MoreVertical, MapPin, Globe } from "lucide-react"
 
-export default async function LoginPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ message?: string }>
-}) {
-  const resolvedSearchParams = await searchParams;
+export default function LoginPage() {
+  const [errorMsg, setErrorMsg] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+    setErrorMsg('')
+    
+    const formData = new FormData(e.currentTarget)
+    const result = await login(formData)
+    
+    if (result?.error) {
+      setErrorMsg(result.error)
+      setLoading(false)
+    }
+    // Si no hay error, el server action hace un redirect a /empresas
+  }
+
   return (
     <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2 mx-auto min-h-screen">
       <form
         className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
-        action={login}
+        onSubmit={handleSubmit}
       >
         <div className="mb-6 flex flex-col items-center">
           <div className="w-12 h-12 bg-[var(--color-gold)] rounded-xl flex items-center justify-center mb-4">
@@ -41,13 +57,16 @@ export default async function LoginPage({
           required
         />
         
-        <button className="bg-[var(--color-gold)] text-[var(--color-graphite-dark)] font-medium rounded-md px-4 py-3 text-white/90 hover:bg-[var(--color-gold-light)] mb-2 transition-colors">
-          Iniciar Sesión
+        <button 
+          disabled={loading}
+          className="bg-[var(--color-gold)] text-[var(--color-graphite-dark)] font-medium rounded-md px-4 py-3 text-white/90 hover:bg-[var(--color-gold-light)] mb-2 transition-colors disabled:opacity-50"
+        >
+          {loading ? 'Iniciando...' : 'Iniciar Sesión'}
         </button>
 
-        {resolvedSearchParams?.message && (
+        {errorMsg && (
           <p className="mt-4 p-4 bg-red-500/10 text-red-500 text-center rounded-md border border-red-500/20">
-            {resolvedSearchParams.message}
+            {errorMsg}
           </p>
         )}
       </form>
