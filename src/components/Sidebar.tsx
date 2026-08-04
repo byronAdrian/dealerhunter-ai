@@ -8,7 +8,7 @@ const menuItems = [
   { name: "Prospección", icon: Target, href: "/prospeccion" },
   { name: "Análisis IA", icon: Sparkles, href: "/analisis" },
   { name: "Propuestas", icon: FileText, href: "/propuestas" },
-  { name: "Demo Web", icon: MonitorPlay, href: "/demos" },
+  { name: "Demos y Plantillas", icon: MonitorPlay, href: "/demos" },
   { name: "Emails", icon: Mail, href: "/emails" },
   { name: "Campañas", icon: Megaphone, href: "/campanas" },
   { name: "CRM", icon: Users, href: "/crm" },

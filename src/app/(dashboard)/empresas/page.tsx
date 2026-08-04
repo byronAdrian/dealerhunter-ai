@@ -1,9 +1,11 @@
 "use client"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import { supabase } from "@/utils/supabase/client"
 import { Plus, Search, Building2, MoreVertical, MapPin, Globe } from "lucide-react"
 
 export default function EmpresasPage() {
+  const router = useRouter()
   const [empresas, setEmpresas] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -80,7 +82,11 @@ export default function EmpresasPage() {
                 </tr>
               ) : (
                 empresas.map((empresa) => (
-                  <tr key={empresa.id} className="border-b border-black/5 dark:border-white/5 hover:bg-[var(--color-background)]/50 transition-colors">
+                  <tr 
+                    key={empresa.id} 
+                    onClick={() => router.push(`/empresas/${empresa.id}`)}
+                    className="border-b border-black/5 dark:border-white/5 hover:bg-[var(--color-background)]/50 transition-colors cursor-pointer"
+                  >
                     <td className="px-6 py-4 font-medium flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-[var(--color-background)] flex items-center justify-center text-[var(--color-gold)]">
                         <Building2 className="w-4 h-4" />

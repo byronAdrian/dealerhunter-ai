@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AutoSync · Software y escaparate web para concesionarios</title>
+    <meta name="description"
+        content="Gestión de stock, presupuestos, garantías y una web de escaparate que enseña tus coches actualizados. Montado y funcionando en 72 horas, sin comisión por venta.">
+    <meta name="theme-color" content="#0B0B0D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AutoSync · Software y escaparate web para concesionarios">
+    <meta property="og:description"
+        content="Tu concesionario vendiendo también cuando está cerrado. Alta en 72 horas y sin comisión por venta.">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="assets/logo-full.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="assets/logo-mark.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.className += ' js';</script>
+</head>
+
+<body>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav">
+        <a class="nav__brand" href="#top" aria-label="AutoSync, inicio">
+            <img class="mark" src="assets/logo-mark.png" alt="" width="320" height="208" decoding="async">
+            <span class="nav__name">AUTOSYNC<span class="nav__sub">GESTIÓN</span></span>
+        </a>
+        <a class="btn btn--ghost nav__cta" href="#demo">Pedir demo</a>
+    </header>
+
+    <nav class="nav__links" aria-label="Principal">
+        <a href="#producto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Producto</span>
+        </a>
+        <a href="#como">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Cómo funciona</span>
+        </a>
+        <a href="#planes">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <span>Planes</span>
+        </a>
+        <a href="#faq">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Dudas</span>
+        </a>
+    </nav>
+
+
+    <main id="top">
+
+        <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+        <section class="hero" id="stage">
+            <!-- Escenario 3D: cada capa se mueve a distinta profundidad con el puntero -->
+            <div class="stage" aria-hidden="true">
+                <div class="stage__floor"></div>
+                <div class="stage__glow"></div>
+                <div class="hero__cut" data-depth="26"></div>
+                <div class="stage__ring" data-depth="14"></div>
+                <div class="stage__ring stage__ring--2" data-depth="40"></div>
+            </div>
+
+            <div class="hero__inner">
+                <p class="eyebrow reveal">Software para compraventa de vehículos</p>
+
+                <h1 class="hero__title reveal" style="--d:.08s">
+                    Tu concesionario,<br>
+                    <span class="word-scroller">
+                        <span class="word-scroller-inner">
+                            <span class="metal">conectado.</span>
+                            <span class="metal">actualizado.</span>
+                            <span class="metal">automatizado.</span>
+                            <span class="metal">conectado.</span>
+                        </span>
+                    </span>
+                </h1>
+
+                <p class="hero__lead reveal" style="--d:.16s">
+                    Controla todo desde un solo lugar: stock, tasaciones, clientes y web. 
+                    Vende más rápido y automatiza tareas manuales con la plataforma de los concesionarios modernos.
+                </p>
+
+                <div class="hero__actions reveal" style="--d:.24s">
+                    <a class="btn btn--red" href="https://www.autosmilan.es/" target="_blank" rel="noopener">
+                        Ver un concesionario real funcionando
+                    </a>
+                    <a class="btn btn--metal" href="#demo">Quiero mi demo con mi stock</a>
+                </div>
+
+                <ul class="chips reveal" style="--d:.32s">
+                    <li>Alta en 72 horas</li>
+                    <li>0 € de comisión por coche vendido</li>
+                    <li>Sin permanencia</li>
+                </ul>
+            </div>
+
+            <aside class="hero-case reveal" style="--d:.4s">
+                <div class="hero-case__header">
+                    <span class="status-dot"></span> EN PRODUCCIÓN AHORA
+                </div>
+                <div class="hero-case__body">
+                    <h3 class="hero-case__title">AUTOS MILÁN</h3>
+                    <p class="hero-case__desc">Concesionario multimarca en Villena. Control total y sincronización web.</p>
+                    <ul class="hero-case__features">
+                        <li><i data-lucide="check-circle-2" width="16"></i> Escaparate público conectado</li>
+                        <li><i data-lucide="check-circle-2" width="16"></i> Tasaciones online automáticas</li>
+                        <li><i data-lucide="check-circle-2" width="16"></i> Gestión desde móvil y PC</li>
+                    </ul>
+                </div>
+                <a href="https://www.autosmilan.es/" target="_blank" rel="noopener" class="hero-case__link">
+                    Visitar caso real <i data-lucide="arrow-right" width="16"></i>
+                </a>
+            </aside>
+        </section>
+
+        <!-- ══ DOLOR ════════════════════════════════════════════════════════ -->
+        <section class="band">
+            <div class="band__track" aria-hidden="true">
+                <span>STOCK AL DÍA</span><span class="dot"></span>
+                <span>PRESUPUESTOS EN PDF</span><span class="dot"></span>
+                <span>GARANTÍAS</span><span class="dot"></span>
+                <span>CONTRATOS DE VENTA</span><span class="dot"></span>
+                <span>ESCAPARATE WEB</span><span class="dot"></span>
+                <span>STOCK AL DÍA</span><span class="dot"></span>
+                <span>PRESUPUESTOS EN PDF</span><span class="dot"></span>
+                <span>GARANTÍAS</span><span class="dot"></span>
+                <span>CONTRATOS DE VENTA</span><span class="dot"></span>
+                <span>ESCAPARATE WEB</span><span class="dot"></span>
+            </div>
+        </section>
+
+        <section class="sec sec--pain" id="problema">
+            <div class="sec__head">
+                <span class="num" aria-hidden="true">01</span>
+                <h2 class="reveal">Si te suena algo de esto,<br><span class="metal">esto es para ti.</span></h2>
+            </div>
+
+            <div class="pains-grid">
+                <div class="pain-card reveal">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="3" x2="21" y1="15" y2="15"/><line x1="9" x2="9" y1="9" y2="21"/><line x1="15" x2="15" y1="9" y2="21"/></svg>
+                    </div>
+                    <h3>El stock vive en un Excel</h3>
+                    <p>Que solo entiende una persona, y cuando esa persona libra, nadie sabe qué hay.</p>
+                </div>
+                <div class="pain-card reveal" style="--d:.06s">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+                    </div>
+                    <h3>Pagas comisión en los portales</h3>
+                    <p>Por cada contacto, y el cliente que llega ya ha visto el mismo coche en otras seis pestañas.</p>
+                </div>
+                <div class="pain-card reveal" style="--d:.12s">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3>La web está desactualizada</h3>
+                    <p>Porque actualizarla es pedir favores, así que enseña coches que vendiste hace tres meses.</p>
+                </div>
+                <div class="pain-card reveal" style="--d:.18s">
+                    <div class="pain-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    </div>
+                    <h3>Cada presupuesto es un Word</h3>
+                    <p>Que alguien reescribe a mano, con el riesgo de equivocarse en el precio delante del cliente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PRODUCTO ═════════════════════════════════════════════════════ -->
+        <section class="sec" id="producto" style="position: relative; overflow: hidden;">
+            <div class="particle-system" aria-hidden="true"></div>
+            <div class="particle-system particle-system--2" aria-hidden="true"></div>
+            <div class="sec__head">
+                <span class="num" aria-hidden="true">02</span>
+                <h2 class="reveal">Dos piezas que trabajan juntas</h2>
+                <p class="sec__lead reveal">
+                    El panel es para dentro. El escaparate es para fuera. Lo que tocas en uno
+                    aparece en el otro sin que tengas que hacer nada.
+                </p>
+            </div>
+
+            <div class="cards">
+                <article class="card reveal">
+                    <h3>Panel de stock</h3>
+                    <p>Alta de vehículo con fotos, ficha técnica, gastos, matrícula y bastidor.
+                        Reservado y vendido en un clic, y el escaparate se entera solo.</p>
+                </article>
+                <article class="card reveal" style="--d:.03s">
+                    <h3>Dashboard completo</h3>
+                    <p>Controla tus ingresos, gastos por vehículo, clientes potenciales y métricas de negocio desde un único panel centralizado.</p>
+                </article>
+                <article class="card reveal" style="--d:.06s">
+                    <h3>Escaparate web propio</h3>
+                    <p>Tu dominio, tu logo, tus colores. Buscador por marca, precio, combustible
+                        y etiqueta medioambiental. Se ve bien en el móvil, que es donde miran.</p>
+                </article>
+                <article class="card reveal" style="--d:.12s">
+                    <h3>Presupuestos y contratos</h3>
+                    <p>PDF con tu marca en segundos: presupuesto, proforma, contrato de compraventa
+                        y arras. Mismo diseño en todos los documentos.</p>
+                </article>
+                <article class="card reveal" style="--d:.18s">
+                    <h3>Garantías y financiación</h3>
+                    <p>Garantía por vehículo con sus meses y condiciones, propuestas de financiación
+                        y préstamos, todo enlazado con la venta.</p>
+                </article>
+                <article class="card reveal" style="--d:.24s">
+                    <h3>Contactos que sí llegan</h3>
+                    <p>WhatsApp directo desde cada coche, formulario de tasación y avisos de nuevo
+                        stock. El contacto entra en tu panel, no en el de un portal.</p>
+                </article>
+                <article class="card card--soon reveal" style="--d:.3s">
+                    <h3>Facturación <span class="tag">VeriFactu</span></h3>
+                    <p>Factura desde la propia venta, con tu numeración y tu marca. Incluida en
+                        los dos planes, con 500 o 3.000 facturas al mes según el que elijas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ══ IMÁGENES / INTERFAZ ═════════════════════════════════════════ -->
+        <section class="sec" id="interfaz">
+            <div class="sec__head">
+                <span class="num" aria-hidden="true">03</span>
+                <h2 class="reveal">Un vistazo al <br><span class="metal">interior del motor</span></h2>
+                <p class="sec__lead reveal">
+                    Diseñado para ser rápido, intuitivo y sin distracciones. Todo lo que necesitas a un clic de distancia.
+                </p>
+            </div>
+
+            <div class="cards">
+                <article class="card card--has-img reveal">
+                    <img src="assets/admin-vehiculos.png" alt="Panel de stock AutoSync" class="card__img" decoding="async" onclick="openModal(this.src, this.alt)" style="margin-top: -1.5rem; border-radius: 12px 12px 0 0; border-top: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); height: 220px;">
+                    <h3 style="margin-top: 1.5rem;">Panel de stock</h3>
+                    <p>Gestión completa del inventario y estado de cada vehículo.</p>
+                    <button class="zoom-btn" onclick="openModal('assets/admin-vehiculos.png', 'Panel de stock AutoSync')" aria-label="Ampliar imagen" style="bottom: auto; top: 1rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Ampliar
+                    </button>
+                </article>
+                <article class="card card--has-img reveal" style="--d:.05s">
+                    <img src="assets/admin-dashboard.png" alt="Dashboard AutoSync" class="card__img" decoding="async" onclick="openModal(this.src, this.alt)" style="margin-top: -1.5rem; border-radius: 12px 12px 0 0; border-top: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); height: 220px;">
+                    <h3 style="margin-top: 1.5rem;">Dashboard analítico</h3>
+                    <p>Métricas financieras, rentabilidad y conversiones en tiempo real.</p>
+                    <button class="zoom-btn" onclick="openModal('assets/admin-dashboard.png', 'Dashboard AutoSync')" aria-label="Ampliar imagen" style="bottom: auto; top: 1rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Ampliar
+                    </button>
+                </article>
+                <article class="card card--has-img reveal" style="--d:.1s">
+                    <img src="assets/inicio.png" alt="Página de inicio del escaparate web" class="card__img" decoding="async" onclick="openModal(this.src, this.alt)" style="margin-top: -1.5rem; border-radius: 12px 12px 0 0; border-top: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); height: 220px;">
+                    <h3 style="margin-top: 1.5rem;">Escaparate online</h3>
+                    <p>Tu propia página web optimizada, sincronizada al instante con tu stock.</p>
+                    <button class="zoom-btn" onclick="openModal('assets/inicio.png', 'Página de inicio del escaparate web')" aria-label="Ampliar imagen" style="bottom: auto; top: 1rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Ampliar
+                    </button>
+                </article>
+                <article class="card card--has-img reveal" style="--d:.15s">
+                    <img src="assets/diseño-tarjeta.png" alt="Diseño de tarjeta y presupuesto" class="card__img" decoding="async" onclick="openModal(this.src, this.alt)" style="margin-top: -1.5rem; border-radius: 12px 12px 0 0; border-top: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); height: 220px;">
+                    <h3 style="margin-top: 1.5rem;">Documentación unificada</h3>
+                    <p>Presupuestos, contratos y proformas generadas con tu imagen corporativa.</p>
+                    <button class="zoom-btn" onclick="openModal('assets/diseño-tarjeta.png', 'Diseño de tarjeta y presupuesto')" aria-label="Ampliar imagen" style="bottom: auto; top: 1rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Ampliar
+                    </button>
+                </article>
+                <article class="card card--has-img reveal" style="--d:.2s">
+                    <img src="assets/vehiculo-detalle.png" alt="Detalle de vehículo y captura de leads" class="card__img" decoding="async" onclick="openModal(this.src, this.alt)" style="margin-top: -1.5rem; border-radius: 12px 12px 0 0; border-top: none; border-bottom: 1px solid rgba(255, 255, 255, 0.05); height: 220px;">
+                    <h3 style="margin-top: 1.5rem;">Ficha técnica y captación</h3>
+                    <p>Fichas detalladas diseñadas para maximizar los contactos directos.</p>
+                    <button class="zoom-btn" onclick="openModal('assets/vehiculo-detalle.png', 'Detalle de vehículo y captura de leads')" aria-label="Ampliar imagen" style="bottom: auto; top: 1rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Ampliar
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- ══ CÓMO ═════════════════════════════════════════════════════════ -->
+        <section class="sec sec--steps" id="como">
+            <div class="sec__head">
+                <span class="num" aria-hidden="true">04</span>
+                <h2 class="reveal">De tu Excel a tu web<br><span class="metal">en tres días</span></h2>
+            </div>
+
+            <ol class="steps">
+                <li class="reveal">
+                    <span class="steps__n">1</span>
+                    <h3>Nos pasas tu stock</h3>
+                    <p>En Excel, en fotos o directamente de la web que ya tengas. No hay que
+                        rellenar nada a mano: lo cargamos nosotros.</p>
+                </li>
+                <li class="reveal" style="--d:.08s">
+                    <span class="steps__n">2</span>
+                    <h3>Lo montamos con tu marca</h3>
+                    <p>Tu logo, tus colores, tus datos fiscales y tus textos legales. En 72 horas
+                        lo tienes en pie para revisarlo.</p>
+                </li>
+                <li class="reveal" style="--d:.16s">
+                    <span class="steps__n">3</span>
+                    <h3>Publicas y a vender</h3>
+                    <p>Apuntamos tu dominio, te enseñamos el panel en una hora y a partir de ahí
+                        lo llevas tú. Nosotros seguimos detrás por si acaso.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ══ PLANES ═══════════════════════════════════════════════════════ -->
+        <section class="sec" id="planes">
+            <div class="sec__head">
+                <span class="num" aria-hidden="true">04</span>
+                <h2 class="reveal">Planes claros, sin letra pequeña</h2>
+                <p class="sec__lead reveal">
+                    Dos planes y ya está. Precio por vehículos publicados y facturas emitidas,
+                    no por usuarios: da de alta a todo tu equipo sin pagar de más. Cuota mensual
+                    más un alta única que cubre el montaje y la carga de tu stock.
+                </p>
+            </div>
+
+            <div class="plans plans--duo">
+                <article class="plan reveal">
+                    <h3 class="plan__name">Compraventa</h3>
+                    <p class="plan__price"><span>79</span> € <small>/mes</small></p>
+                    <p class="plan__setup">Alta única de 490 €</p>
+                    <ul class="plan__list">
+                        <li>Hasta 40 vehículos publicados</li>
+                        <li><b>500 facturas al mes</b> con VeriFactu</li>
+                        <li>Escaparate web con tu marca</li>
+                        <li>Presupuestos y contratos en PDF</li>
+                        <li>WhatsApp y formularios</li>
+                        <li>Soporte por correo</li>
+                    </ul>
+                    <a class="btn btn--ghost btn--full" href="#demo">Pedir demo</a>
+                </article>
+
+                <article class="plan plan--best reveal" style="--d:.08s">
+                    <p class="plan__flag">El que contrata casi todo el mundo</p>
+                    <h3 class="plan__name">Concesionario</h3>
+                    <p class="plan__price"><span>149</span> € <small>/mes</small></p>
+                    <p class="plan__setup">Alta única de 690 €</p>
+                    <ul class="plan__list">
+                        <li>Vehículos publicados sin límite</li>
+                        <li><b>3.000 facturas al mes</b> con VeriFactu</li>
+                        <li>Todo lo del plan Compraventa</li>
+                        <li>Garantías, financiación y préstamos</li>
+                        <li>Tasación y avisos de nuevo stock</li>
+                        <li>Dominio propio y correo</li>
+                        <li>Soporte por teléfono</li>
+                    </ul>
+                    <a class="btn btn--red btn--full" href="#demo">Pedir demo</a>
+                </article>
+            </div>
+
+            <p class="plans__note">
+                Precios sin IVA. Sin permanencia: si te vas, te llevas tus datos y tus fotos.
+            </p>
+        </section>
+
+        <!-- ══ DEMO / CTA ═══════════════════════════════════════════════════ -->
+        <section class="sec cta" id="demo">
+            <div class="cta__box">
+                <div class="cta__copy">
+                    <span class="num num--in" aria-hidden="true">05</span>
+                    <h2>Te lo monto<br><span class="metal">con tus coches</span></h2>
+                    <p>
+                        Dime tu concesionario y preparo una demo privada con tu stock real, tu logo
+                        y tus precios. La ves con calma, y si no te encaja, la borro. Sin llamadas
+                        de insistencia y sin compromiso.
+                    </p>
+                    <p class="cta__mini">Respondo el mismo día laborable.</p>
+                </div>
+
+                <form class="form" action="#" method="post" novalidate>
+                    <label>
+                        <span>Tu nombre</span>
+                        <input type="text" name="nombre" autocomplete="name" required>
+                    </label>
+                    <label>
+                        <span>Concesionario</span>
+                        <input type="text" name="empresa" autocomplete="organization" required>
+                    </label>
+                    <label>
+                        <span>Teléfono o correo</span>
+                        <input type="text" name="contacto" autocomplete="tel" required>
+                    </label>
+                    <label>
+                        <span>Tu web actual <small>(si tienes)</small></span>
+                        <input type="url" name="web" placeholder="https://" autocomplete="url">
+                    </label>
+                    <button class="btn btn--red btn--full" type="submit">Preparadme la demo</button>
+                    <p class="form__legal">
+                        Solo uso estos datos para responderte. Nada de listas de correo.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- ══ FAQ ══════════════════════════════════════════════════════════ -->
+        <section class="sec" id="faq">
+            <div class="sec__head">
+                <span class="num" aria-hidden="true">06</span>
+                <h2 class="reveal">Lo que siempre me preguntan</h2>
+            </div>
+
+            <div class="faq">
+                <details class="reveal">
+                    <summary>¿Tengo que migrar algo o aprender un programa nuevo?</summary>
+                    <p>La carga inicial la hago yo con lo que me pases. El panel se enseña en una
+                        hora y está pensado para usarse desde el móvil en el propio taller.</p>
+                </details>
+                <details class="reveal" style="--d:.05s">
+                    <summary>Ya tengo web. ¿Me obliga a cambiarla?</summary>
+                    <p>No. Podemos dejar tu web como está y colgar el escaparate en una dirección
+                        propia, o sustituirla entera. Lo decides tú al ver la demo.</p>
+                </details>
+                <details class="reveal" style="--d:.1s">
+                    <summary>¿Cobras comisión por coche vendido?</summary>
+                    <p>Cero. Pagas la cuota y vendes lo que vendas. Ese es justo el motivo por el
+                        que la mayoría se plantea salir de los portales.</p>
+                </details>
+                <details class="reveal" style="--d:.15s">
+                    <summary>¿Cuántas facturas puedo emitir?</summary>
+                    <p>500 al mes en el plan Compraventa y 3.000 en el plan Concesionario, que para
+                        un concesionario normal sobran de largo. Si un mes te pasas, el panel te avisa
+                        antes de llegar al límite y amplías desde 1 € por cada 100 facturas, solo ese
+                        mes. No se bloquea la facturación ni se te sube de plan sin avisar.</p>
+                </details>
+                <details class="reveal" style="--d:.2s">
+                    <summary>¿Y si dentro de seis meses no me convence?</summary>
+                    <p>No hay permanencia. Avisas, te exporto tus vehículos y tus fotos, y no hay
+                        penalización de ningún tipo.</p>
+                </details>
+                <details class="reveal" style="--d:.25s">
+                    <summary>¿Quién hay detrás?</summary>
+                    <p>Un desarrollador, no una centralita. Hablas siempre con la misma persona,
+                        que es la que ha hecho el programa.</p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="foot">
+        <div class="foot__brand">
+            <img class="foot__logo" src="assets/logo-word.png"
+                alt="AutoSync, el software que conecta todo tu concesionario" width="900" height="168" loading="lazy"
+                decoding="async">
+        </div>
+        <p class="foot__legal">
+            AutoSync es nombre comercial de <b>Byron Adrián Balcázar Jiménez</b> · NIF 46088860B · Plaza del rollo, 3
+            Villena-Alicante
+        </p>
+        <nav class="foot__links" aria-label="Legal">
+            <a href="/aviso-legal">Aviso legal</a>
+            <a href="/privacidad">Privacidad</a>
+            <a href="/cookies">Cookies</a>
+        </nav>
+    </footer>
+
+    <!-- Modal de Imagen -->
+    <div id="image-modal" class="modal" aria-hidden="true">
+        <div class="modal__backdrop" tabindex="-1" onclick="closeModal()"></div>
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal()" aria-label="Cerrar">&times;</button>
+            <img src="" alt="" id="modal-image">
+        </div>
+    </div>
+
+    <script>
+        function openModal(src, alt) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            modalImg.src = src;
+            modalImg.alt = alt || '';
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+        }
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+        // Cerrar con Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
